@@ -1,0 +1,123 @@
+.cards-container {
+  height: 30rem;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  width: 100vw;
+
+  @include flex(flex, start);
+
+  &__card {
+    background-color: $color-light-gray;
+    border-radius: 1rem;
+    margin: $margin-2;
+    margin-right: 0;
+    scroll-snap-align: start;
+    width: 18.125rem;
+  }
+
+  &__left-text {
+    @include grid(grid, 1fr 1fr 1fr, 1fr) {
+      row-gap: 0.75rem;
+      margin-top: $margin-1;
+      margin-left: $margin-1;
+      width: 6.75rem;
+    }
+  }
+
+  &__right-text {
+    @include grid(grid, 1fr 1fr 1fr, 1fr) {
+      row-gap: 0.75rem;
+      margin-top: $margin-1;
+      margin-right: $margin-1;
+      justify-items: end;
+    }
+    margin-left: $margin-1;
+  }
+
+  &__img-1 {
+    background-image: url(/assets/ntfs/ntf-1.svg);
+    @include nft;
+  }
+
+  &__img-2 {
+    background-image: url(/assets/ntfs/nft-2.svg);
+    @include nft;
+  }
+
+  &__img-3 {
+    background-image: url(/assets/ntfs/ntf-3.svg);
+    @include nft;
+  }
+
+  &__img-4 {
+    background-image: url(/assets/ntfs/ntf-4.svg);
+    @include nft;
+  }
+
+  &__description {
+    @include grid(grid, 1fr 1fr 1fr, 1fr 1fr);
+  }
+
+  &__gloop {
+    margin: auto 0;
+    text-transform: uppercase;
+    color: $color-orange;
+    font-size: $font-0-75;
+    font-weight: 500;
+  }
+
+  &__bid {
+    margin: auto 0;
+    text-transform: uppercase;
+    color: $color-gray-2;
+    font-size: $font-0-75;
+    font-weight: 500;
+  }
+
+  &__name {
+    margin: auto 0;
+    font-size: $font-1-25;
+    font-weight: 500;
+  }
+
+  &__price {
+    margin: auto 0;
+    font-size: $font-1;
+    font-weight: 500;
+  }
+  &__price::before {
+    background-image: url(/assets/eth.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin-right: 0.35rem;
+    padding-right: 0.15rem;
+    width: 10px;
+    height: 20px;
+
+    content: "";
+  }
+  &__id,
+  &__duration {
+    font-size: $font-1-125;
+    color: $color-gray-2;
+    font-weight: 400;
+  }
+}
+
+.cards-container::-webkit-scrollbar {
+  display: none;
+}
+
+@include tablet {
+  .cards-container {
+    justify-content: space-evenly;
+    height: fit-content;
+    width: 100vw;
+    &__card {
+      width: auto;
+      margin: 0;
+      height: 25rem;
+    }
+  }
+}

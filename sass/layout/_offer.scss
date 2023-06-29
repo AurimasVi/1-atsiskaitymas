@@ -1,0 +1,29 @@
+.offer {
+  height: 20rem;
+  background-image: url(/assets/background.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  &__header {
+    width: 22.75rem;
+    font-size: $font-2-5;
+    font-weight: 500;
+    padding-top: 7rem;
+    margin: 0 $margin-2 1rem $margin-2;
+  }
+  &__text {
+    width: 22.75rem;
+    font-size: $font-1-25;
+    line-height: 150%;
+    margin: 0 $margin-2 0 $margin-2;
+  }
+}
+
+@include tablet {
+  .offer {
+    width: calc(100vw - 4rem);
+    background-size: cover;
+    border-radius: 1rem;
+    margin: auto;
+    margin-bottom: 5rem;
+  }
+}

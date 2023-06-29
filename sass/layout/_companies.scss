@@ -1,0 +1,34 @@
+.companies {
+  @include grid(grid, 1fr 1fr, 1fr 1fr) {
+    :nth-child(2),
+    :nth-child(5) {
+      justify-self: end;
+    }
+
+    align-items: center;
+    grid-row-gap: 1rem;
+    grid-column-gap: 1.5rem;
+  }
+  margin: $margin-2;
+
+  &__img {
+    height: 2.5rem;
+
+    &--hide {
+      display: none;
+    }
+  }
+}
+
+@include tablet {
+  .companies {
+    padding-bottom: 3rem;
+    @include flex(flex, space-between) {
+    }
+    &__img {
+      &--hide {
+        display: block;
+      }
+    }
+  }
+}

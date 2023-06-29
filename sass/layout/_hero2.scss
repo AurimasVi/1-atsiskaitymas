@@ -1,0 +1,70 @@
+.hero2 {
+  background-image: url(/assets/upsell-footer-image.svg);
+  background-size: cover;
+  height: 39.25rem;
+  background-repeat: no-repeat;
+  background-position: 19rem 10rem;
+  background-size: 12.875rem;
+  margin-top: 5rem;
+  padding-top: 3rem;
+  border-top: solid 2px $color-light-gray;
+  border-bottom: solid 2px $color-light-gray;
+  &__text {
+    font-size: $font-1;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $color-pink;
+    margin: $margin-1 $margin-1 $margin-1 $margin-2;
+  }
+  &__header {
+    font-size: $font-3;
+    margin: 0 $margin-1 $margin-1 $margin-2;
+    font-weight: 900;
+    width: 15rem;
+  }
+  &__subtext {
+    font-size: $font-1-25;
+    width: 12.7rem;
+    margin: 0 0 $margin-2 $margin-2;
+    color: $color-gray;
+    line-height: 150%;
+  }
+  &__cta {
+    width: 11.75rem;
+    height: 4.6875rem;
+    cursor: pointer;
+    background: linear-gradient(white, white) padding-box,
+      linear-gradient(
+          60deg,
+          rgba(255, 57, 152, 1) 0%,
+          rgba(255, 57, 57, 1) 40%,
+          rgba(255, 129, 57, 1) 85%,
+          rgba(57, 255, 160, 1) 100%
+        )
+        border-box;
+    border-radius: 10rem;
+    border: 0.3rem solid transparent;
+
+    margin: 0 0 0 $margin-2;
+    font-size: $font-1-25;
+    font-weight: 600;
+    background-color: rgb(255, 255, 255);
+  }
+}
+
+@include tablet {
+  .hero2 {
+    background-position: 60rem 3rem;
+    padding-top: 5rem;
+    height: 32rem;
+
+    &__subtext {
+      width: 33rem;
+    }
+
+    &__header {
+      font-size: 3.5rem;
+      width: 38.75rem;
+    }
+  }
+}

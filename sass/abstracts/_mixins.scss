@@ -1,0 +1,25 @@
+@mixin tablet {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin flex($display, $justify) {
+  display: $display;
+  justify-content: $justify;
+  @content;
+}
+
+@mixin grid($display, $rows, $cols) {
+  display: $display;
+  grid-template-rows: $rows;
+  grid-template-columns: $cols;
+  @content;
+}
+
+@mixin nft {
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 17.125rem;
+  height: 16.375rem;
+}

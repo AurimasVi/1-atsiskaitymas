@@ -1,0 +1,36 @@
+.auction {
+  height: 13rem;
+
+  &__header {
+    width: 22.75rem;
+    font-size: $font-2-5;
+    font-weight: 500;
+    margin-left: $margin-2;
+    margin-bottom: 1rem;
+  }
+
+  &__text {
+    width: 22.75rem;
+    margin-left: $margin-2;
+    font-size: $font-1-25;
+    line-height: 150%;
+  }
+
+  &__link {
+    text-decoration: underline;
+    font-weight: 500;
+  }
+}
+
+@include tablet {
+  .auction {
+    height: 8rem;
+    &__header {
+      width: auto;
+    }
+
+    &__text {
+      width: auto;
+    }
+  }
+}
